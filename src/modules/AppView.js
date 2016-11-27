@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
 import NavigationViewContainer from './navigation/NavigationViewContainer';
+import Control from '../components/Control';
 import * as snapshotUtil from '../utils/snapshot';
 import * as SessionStateActions from '../modules/session/SessionState';
 import store from '../redux/store';
@@ -39,7 +40,7 @@ const AppView = React.createClass({
 
     return (
       <View style={{flex: 1}}>
-        <NavigationViewContainer />
+        <Control action="Start" title="Tesing the control module" color="green"/>
         {__DEV__ && <DeveloperMenu />}
       </View>
     );

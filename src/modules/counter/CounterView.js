@@ -26,12 +26,6 @@ const CounterView = React.createClass({
   random() {
     this.props.dispatch(CounterState.random());
   },
-  bored() {
-    this.props.dispatch(NavigationState.pushRoute({
-      key: 'Color',
-      title: 'Color Screen'
-    }));
-  },
 
   renderUserInfo() {
     if (!this.props.userName) {
@@ -83,13 +77,6 @@ const CounterView = React.createClass({
             Random
           </Text>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={this.bored} accessible={true}>
-          <Text style={styles.linkButton}>
-            {'I\'m bored!'}
-          </Text>
-        </TouchableOpacity>
-
       </View>
     );
   }
