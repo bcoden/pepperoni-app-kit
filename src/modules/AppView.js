@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {View, StyleSheet, ActivityIndicator} from 'react-native';
+import {View, ScrollView, StyleSheet, ActivityIndicator} from 'react-native';
 import NavigationViewContainer from './navigation/NavigationViewContainer';
 import Control from '../components/Control';
 import * as snapshotUtil from '../utils/snapshot';
@@ -39,8 +39,11 @@ const AppView = React.createClass({
     }
 
     return (
-      <View style={{flex: 1}}>
+      <View style={styles.centered}>
         <Control action="Start" title="Tesing the control module" color="green"/>
+        <Control action="Begin" title="Tesing the being control module" color="red"/>
+        <Control action="Begin" title="Tesing the being control module" color="orange"/>
+        <Control action="Begin" title="Tesing the being control module" color="blue"/>
         {__DEV__ && <DeveloperMenu />}
       </View>
     );
@@ -49,8 +52,8 @@ const AppView = React.createClass({
 
 const styles = StyleSheet.create({
   centered: {
-    flex: 1,
-    alignSelf: 'center'
+    flex: 1, 
+    flexDirection: 'row'
   }
 });
 

@@ -23,13 +23,19 @@ const Control = React.createClass({
   render() {
     // add addtional properties here
     return (
-      <View>
+      <View style={styles.view}>
         <TouchableOpacity onPress={onButtonPress}>
-          <Container action={this.props.action} title={this.props.title} />
+          <Container action={this.props.action} title={this.props.title} color={this.props.color} />
         </TouchableOpacity>
       </View>
     );
   }
 });
 
+const styles = StyleSheet.create( {
+  view: {
+      width: 200,
+      height: 100
+  }
+} );
 export default Control;
